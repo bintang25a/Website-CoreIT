@@ -29,7 +29,11 @@ article .img-container {
     flex-wrap: wrap;
 }
 
+.img-container .img {
+    min-width: 320px;
+    min-height: 320px;
+}
+
 .img-container img {
-    min-height: 120px;
-    height: 320px;
+    width: 100%;
 }
