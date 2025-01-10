@@ -28,7 +28,7 @@ main .about {
 .about .right-section {
     min-width: 320px;
     min-height: 360px;
-    height: 360px;
+    height: fit-content;
     flex: 3;
 }
 
@@ -112,13 +112,12 @@ main .join-us {
 }
 
 .join-us .left-section {
-    min-width: 360px;
-    width: 360px;
+    min-width: 320px;
+    flex-grow: 1;
     flex: 3;    
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: red; */
 }
 
 .join-us .left-section img {
@@ -126,14 +125,13 @@ main .join-us {
 }
 
 .join-us .right-section {
-    min-width: 360px;
-    width: 360px;
+    min-width: 320px;
+    width: 320px;
     flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: brown; */
 }
 
 .join-us .right-section h3 {
