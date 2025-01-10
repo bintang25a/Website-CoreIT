@@ -1,0 +1,236 @@
+:root {
+    --primary-code: 45, 38, 112;
+    --primary: rgb(var(--primary-code));
+    --white: #fff;
+    --black: #000;
+    --grayInner: #dfdfdf;
+    --grayOuter: #696969;
+
+    --clamp-p: clamp(0.75rem, 1vw, 1rem);
+    --clamp-pl: clamp(0.75rem, 1.5vw, 1.5rem);
+    --clamp-h1l: clamp(4rem, 5vw, 5rem);
+    --clamp-h1: clamp(3rem, 4vw, 4rem);
+    --clamp-h2: clamp(2rem, 3vw, 3rem);
+    --clamp-h3l: clamp(1rem, 2vw, 2rem);
+    --clamp-h3: clamp(1.5rem, 2vw, 2rem);
+    --clamp-h3s: clamp(1rem, 2vw, 1.5rem);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar, .comment-section::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track, .comment-section::-webkit-scrollbar-track {
+    border: 2px solid var(--primary);
+    background: var(--grayInner);
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb, .comment-section::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--primary), var(--white), var(--primary));
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover, .comment-section::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 100px;
+    gap: 24px;
+    overflow-x: hidden;
+}
+
+body a:hover {
+    cursor: pointer;
+}
+
+/* === Navbar Start === */
+nav {
+    width: 100vw;
+    height: 60px;
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    user-select: none;
+}
+
+nav a {
+    color: var(--primary);
+    font-size: var(--clamp-h3s);
+    font-weight: 700;
+    border-bottom: 2px solid var(--white);
+    transition: border-color 0.5s ease;
+}
+
+nav a:hover {
+    border-bottom: 2px solid var(--primary);
+}
+/* === Navbar End === */
+
+
+/* === Header Start === */
+header {
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
+    min-width: 320px;
+    width: 100%;
+    max-height: 640px;
+    min-height: 180px;
+    background-image: url('../img/gambarPosts/gambar1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: 5px 5px 10px var(--primary);
+    user-select: none;
+}
+/* header .header-content {
+    
+} */
+
+header .background-section {
+    width: 100%;
+	height: 100%;
+	transform: skew(-30deg);
+	background: linear-gradient(
+        to bottom,
+        rgba(var(--primary-code), 0.9),
+        rgba(var(--primary-code), 0.6),
+        rgba(var(--primary-code), 0.3)
+    );
+    position: absolute;
+    left: -50%;
+    z-index: 1;
+}
+
+header .text-section {
+    max-height: 350px;
+    min-height: 180px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    text-align: center;
+    z-index: 2;
+}
+
+header h1, a {
+    color: var(--white);
+    font-size: var(--clamp-h3l);
+    font-weight: 600;
+    transition: text-decoration 0.5s ease;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+/* === Header End === */
+
+
+/* === Main Start === */
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+    margin: 80px 0px;
+}
+/* === Main End === */
+
+
+/* === Footer Start === */
+footer {
+    width: 100vw;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+footer .social {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+footer .social a {
+    font-size: var(--clamp-p);
+    font-weight: 400;
+}
+
+footer .social h4 {
+    color: var(--white);
+    font-size: var(--clamp-h3s);
+}
+
+footer .social .contact-us {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .social .follow-us .v {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+footer .social .follow-us a {
+    font-size: var(--clamp-h3);
+    transition: opacity 0.5s ease;
+}
+
+footer a:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+footer p {
+    font-size: var(--clamp-p);
+    font-weight: 500;
+    color: var(--white);
+}
+/* === Footer End === */
+
+
+@media (max-width: 960px) {
+    body {
+      padding: 0 24px;
+    }
+
+    body footer .social {
+        padding: 0;
+    }
+}

@@ -1,0 +1,137 @@
+main {
+    align-items: center;
+    color: var(--primary);
+}
+
+/* === Header Start === */
+main .header {
+    min-width: 360px;
+    width: 30%;
+    max-height: 120px;
+    flex-grow: 1;
+    padding: 10px 10px 10px 40px;
+    background-color: var(--white);
+    border: 2px solid var(--primary);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header .divisi-img {
+    min-width: 80px;
+    width: 120px;
+    min-height: 80px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.header img {
+    width: 100%;
+}
+
+.header h5 {
+    font-size: var(--clamp-h3s);
+}
+/* === Header End === */
+
+
+/* === About Start === */
+main .about {
+    width: 100%;
+}
+
+.about p, h2 {
+    font-size: var(--clamp-h2);
+    font-weight: 600;
+}
+
+.about p {
+    width: 100%;
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+    padding: 40px;
+    text-align: justify;
+}
+/* === About End === */
+
+
+/* === Learning Start === */
+main .learning {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.learning .learning-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.learning-container .bab {
+    min-width: 320px;
+    width: 40%;
+    height: 50px;
+    flex-grow: 1;
+    border: 3px solid var(--primary);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--clamp-h3);
+}
+/* === Learning End === */
+
+
+/* === Member Start === */
+main .member {
+    width: 100%;
+    overflow: auto;
+}
+
+main table {
+    width: 100%;
+    border-collapse: collapse;
+    flex-shrink: 0;
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+table, th, td {
+    border: 2px solid var(--white);
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th, .divisi {
+    text-align: center;
+}
+
+td.action {
+    width: 50px;
+}
+
+table button {
+    width: 100%;
+    flex-grow: 1;
+    transition: opacity 0.5s ease;
+}
+
+table button:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+/* === Member End === */
