@@ -26,7 +26,7 @@ main .about {
 }
 
 .about .right-section {
-    min-width: 360px;
+    min-width: 320px;
     min-height: 360px;
     height: 360px;
     flex: 3;
