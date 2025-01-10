@@ -135,7 +135,7 @@ main .join-us {
 }
 
 .join-us .right-section h3 {
-    font-size: var(--clamp-h1l);
+    font-size: var(--clamp-h1);
     font-weight: 500;
     color: var(--primary);
 }
@@ -159,6 +159,7 @@ main .update {
     font-size: var(--clamp-h1);
     font-weight: 600;
     color: var(--primary);
+    text-align: center;
 }
 
 .update .content {
