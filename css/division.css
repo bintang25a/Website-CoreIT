@@ -5,7 +5,7 @@ main {
 
 /* === Header Start === */
 main .header {
-    min-width: 360px;
+    min-width: 320px;
     width: 30%;
     max-height: 120px;
     flex-grow: 1;
@@ -114,6 +114,14 @@ table, th, td {
 th, td {
     padding: 8px;
     text-align: left;
+}
+
+table th {
+    font-size: var(--clamp-h3s);
+}
+
+table td {
+    font-size: var(--clamp-p);
 }
 
 th, .divisi {
