@@ -194,6 +194,7 @@ footer .social a {
 footer .social h4 {
     color: var(--white);
     font-size: var(--clamp-h3s);
+    white-space: nowrap;
 }
 
 footer .social .contact-us {
@@ -227,7 +228,7 @@ footer p {
 
 @media (max-width: 960px) {
     body {
-      padding: 0 24px;
+      padding: 0 8px;
     }
 
     body footer .social {
