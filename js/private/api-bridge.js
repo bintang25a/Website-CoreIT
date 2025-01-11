@@ -9,9 +9,9 @@ export async function getToken() {
 export async function getMember() {
     const token = localStorage.getItem('token');
 
-    if (!token) {
-        getToken();
-    }
+    // if (!token) {
+    //     getToken();
+    // }
 
     const response = await fetch('https://coreit-database.vercel.app/data/members.js', {
         method: 'GET',
@@ -25,9 +25,9 @@ export async function getMember() {
         throw new Error('Failed to fetch members');
         // location.reload(true);
     }
-    else {
-        getToken();
-    }
+    // else {
+    //     getToken();
+    // }
 
     return await response.json();
 }
