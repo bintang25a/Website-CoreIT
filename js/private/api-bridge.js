@@ -1,5 +1,5 @@
 export async function getToken() {
-    const response = await fetch('http://localhost:3000/get-token');
+    const response = await fetch('https://coreit-database.vercel.app/data/get-token.js');
     const data = await response.json();
     const token = data.token;
     localStorage.setItem('token', token);
@@ -9,7 +9,7 @@ export async function getToken() {
 export async function getMember() {
     const token = localStorage.getItem('token');
 
-    const response = await fetch('http://localhost:3000/members', {
+    const response = await fetch('https://coreit-database.vercel.app/data/members.js', {
         method: 'GET',
         headers: {
             'authorization': `Bearer ${token}`,
