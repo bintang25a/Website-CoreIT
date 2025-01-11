@@ -25,9 +25,7 @@ export async function getMember() {
         throw new Error('Failed to fetch members');
         // location.reload(true);
     }
-    else {
-        getToken();
-    }
-
+    
+    getToken();
     return await response.json();
 }
