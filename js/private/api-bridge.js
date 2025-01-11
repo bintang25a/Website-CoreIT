@@ -22,7 +22,8 @@ export async function getMember() {
     });
     
     if (!response.ok) {
-        throw new Error('Failed to fetch members');
+        token = await getToken();
+        // throw new Error('Failed to fetch members');
         // location.reload(true);
     }
     
