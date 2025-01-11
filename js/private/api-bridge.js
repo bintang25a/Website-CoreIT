@@ -19,7 +19,7 @@ export async function getMember() {
     
     if (!response.ok || !token) {
         getToken();
-        location.reload(true);
+        // location.reload(true);
     }
     else {
         getToken();
