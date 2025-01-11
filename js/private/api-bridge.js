@@ -1,5 +1,29 @@
-import { getMember as firebaseGetMember } from './firebase-api.js';
+export async function getToken() {
+    const response = await fetch('https://coreit-database.vercel.app/api/get-token.js');
+    const data = await response.json();
+    const token = data.token;
+    localStorage.setItem('token', token);
+    return token;
+}
 
 export async function getMember() {
-    return await firebaseGetMember();
+    const token = localStorage.getItem('token');
+
+    const response = await fetch('https://coreit-database.vercel.app/api/members.js', {
+        method: 'GET',
+        headers: {
+            'authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+        },
+    });
+    
+    if (!response.ok || !token) {
+        getToken();
+        location.reload(true);
+    }
+    else {
+        getToken();
+    }
+
+    return await response.json();
 }
