@@ -22,10 +22,11 @@ export async function getMember() {
     });
     
     if (!response.ok) {
-        throw new Error('Failed to fetch members');
+        getToken();
+        // throw new Error('Failed to fetch members');
         // location.reload(true);
     }
     
-    getToken();
+    // getToken();
     return await response.json();
 }
