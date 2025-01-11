@@ -22,6 +22,7 @@ export async function getMember() {
     });
     
     if (!response.ok) {
+        token = await getToken();
         throw new Error('Failed to fetch members');
     }
     
