@@ -40,8 +40,11 @@ export async function saveMember(newMember) {
         throw new Error(`HTTP error! status: ${response.status}`);
     }
 
+    const text = await response.text();
+    console.log('Response text:', text);
+
     try {
-        return await response.json();
+        return JSON.parse(text)
     } catch (error) {
         throw new Error('Failed to parse JSON response');
     }
