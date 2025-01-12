@@ -43,6 +43,10 @@ export async function saveMember(newMember) {
     const text = await response.text();
     console.log('Response text:', text);
 
+    if (!text) {
+        return {};  // Return an empty object if response is empty
+    }
+
     try {
         return JSON.parse(text)
     } catch (error) {
