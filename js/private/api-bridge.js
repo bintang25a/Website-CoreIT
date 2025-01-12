@@ -37,44 +37,19 @@ export async function saveMember(newMember) {
     });
 
     if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    const text = await response.text();
-    console.log('Response text:', text);
-
-    if (!text) {
-        return {};  // Return an empty object if response is empty
+        throw new Error('Failed to fetch response json');
     }
 
     try {
+        const text = await response.text();
+        
+        if (!text) {
+            return {};
+        }
+
         return JSON.parse(text)
-    } catch (error) {
+    }
+    catch (error) {
         throw new Error('Failed to parse JSON response');
     }
 }
-
-// export async function saveMember(newMember) {
-//     const token = await getToken();
-
-//     const response = await fetch('https://coreit-database.vercel.app/data/save-member.js', {
-//         method: 'POST',
-//         headers: {
-//             'authorization': `Bearer ${token}`,
-//             'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify(newMember)
-//     });
-    
-//     const responseBody = await response.text();
-//     console.log('Response body:', responseBody);
-
-//     try {
-//         return JSON.parse(responseBody);
-//     } 
-//     catch (error) {
-//         throw new Error('Failed to parse JSON from response');
-//     }
-
-//     return await response.json();
-// }
