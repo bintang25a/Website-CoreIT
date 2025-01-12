@@ -36,7 +36,15 @@ export async function saveMember(newMember) {
         body: JSON.stringify(newMember)
     });
 
-    return await response.json();
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    try {
+        return await response.json();
+    } catch (error) {
+        throw new Error('Failed to parse JSON response');
+    }
 }
 
 // export async function saveMember(newMember) {
