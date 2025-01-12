@@ -27,22 +27,22 @@
     scroll-behavior: smooth;
 }
 
-body::-webkit-scrollbar, .comment-section::-webkit-scrollbar {
+body::-webkit-scrollbar, .comment-section::-webkit-scrollbar, .member .table-container::-webkit-scrollbar {
     width: 8px;
 }
 
-body::-webkit-scrollbar-track, .comment-section::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track, .comment-section::-webkit-scrollbar-track,  .member .table-container::-webkit-scrollbar-track{
     border: 2px solid var(--primary);
     background: var(--grayInner);
     border-radius: 5px;
 }
 
-body::-webkit-scrollbar-thumb, .comment-section::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb, .comment-section::-webkit-scrollbar-thumb, .member .table-container::-webkit-scrollbar-thumb {
     background: linear-gradient(var(--primary), var(--white), var(--primary));
     border-radius: 5px;
 }
 
-body::-webkit-scrollbar-thumb:hover, .comment-section::-webkit-scrollbar-thumb:hover {
+body::-webkit-scrollbar-thumb:hover, .comment-section::-webkit-scrollbar-thumb:hover, .member .table-container::-webkit-scrollbar-thumb:hover {
     background: var(--primary);
 }
 
