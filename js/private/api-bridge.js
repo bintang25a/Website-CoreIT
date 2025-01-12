@@ -23,3 +23,18 @@ export async function getMember() {
     
     return await response.json();
 }
+
+export async function saveMember(newMember) {
+    const token = await getToken();
+
+    const response = await fetch('https://coreit-database.vercel.app/data/save-member.js', {
+        method: 'POST',
+        headers: {
+            'authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newMember)
+    });
+
+    return await response.json();
+}

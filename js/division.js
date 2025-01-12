@@ -1,4 +1,4 @@
-import { getMember } from './private/api-bridge.js';
+import { getMember } from '../api-bridge.js';
 
 let divisi;
 let deskripsi;
@@ -84,19 +84,16 @@ async function displayMembers() {
     tableBody.innerHTML = "";
 
     const members = await getMember();
-    members.forEach((member) => {
-        const divisi = member.divisi.trim();
+    members.filter(member => member.divisi === divisiID && !member.isNew).forEach((member) => {
 
-        if (divisi === divisiID) {
-            const row = document.createElement("tr");
+        const row = document.createElement("tr");
 
-            row.innerHTML = `
-            <td>${member.NIM}</td>
-            <td>${member.nama}</td>
-            <td>${member.prodi}</td>
-            `;
+        row.innerHTML = `
+        <td>${member.NIM}</td>
+        <td>${member.nama}</td>
+        <td>${member.prodi}</td>
+        `;
 
-            tableBody.appendChild(row);
-        }
+        tableBody.appendChild(row);
     });
 }
