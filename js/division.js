@@ -1,4 +1,4 @@
-import { getMember } from '../api-bridge.js';
+import { getMember } from '/js/private/api-bridge.js';
 
 let divisi;
 let deskripsi;
