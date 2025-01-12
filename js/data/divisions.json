@@ -1,0 +1,59 @@
+[
+    { 
+        "divisi": "Programming",
+        "kode_divisi": "programming",
+        "deskripsi": "In this division, you will learn about Programing skills and logic. It is expected that later you can solve the Study case about Logical in Gemastik.",
+        "bab": ["Java", "Logic"]
+    },
+    { 
+        "divisi": "Cyber Security",
+        "kode_divisi": "cyber-security",
+        "deskripsi": "In this division, you will learn about Cyber Security, Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste officia, dolore suscipit distinctio explicabo."
+    },
+    { 
+        "divisi": "Software Engineering",
+        "kode_divisi": "software-engineering",
+        "deskripsi": "In this division, you will learn about RPL, Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste officia, dolore suscipit distinctio explicabo."
+    },
+    { 
+        "divisi": "Game Development",
+        "kode_divisi": "game-development",
+        "deskripsi": "In this division, you will learn about game development using Unity. It is expected that later you can make a game to be competed in Gemastik."
+        
+    },
+    { 
+        "divisi": "Data Mining",
+        "kode_divisi": "data-mining",
+        "deskripsi": "In this division, you will learn about Data Mining, Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste officia, dolore suscipit distinctio explicabo."
+    },
+    { 
+        "divisi": "UI / UX",
+        "kode_divisi": "ui-ux",
+        "deskripsi": "In this division, you will learn about UI/UX, Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste officia, dolore suscipit distinctio explicabo."
+    },
+    { 
+        "divisi": "ICT Business",
+        "kode_divisi": "ict-business",
+        "deskripsi": "In this division, you will learn about ICT Business, Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste officia, dolore suscipit distinctio explicabo."
+    },
+    { 
+        "divisi": "Smart City",
+        "kode_divisi": "smart-city",
+        "deskripsi": "In this division, you will learn about Smart City, Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste officia, dolore suscipit distinctio explicabo."
+    },
+    { 
+        "divisi": "ICT Scientific Paper",
+        "kode_divisi": "ict-scientific-paper",
+        "deskripsi": "In this division, you will learn about ICT Scientific Paper, Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste officia, dolore suscipit distinctio explicabo."
+    },
+    {
+        "divisi": "Internet of Things",
+        "kode_divisi": "internet-of-things",
+        "deskripsi": "In this division, you will learn about Internet of Things, Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste officia, dolore suscipit distinctio explicabo."
+    },
+    { 
+        "divisi": "Animation",
+        "kode_divisi": "animation",
+        "deskripsi": "In this division, you will learn about Animation, Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste officia, dolore suscipit distinctio explicabo."
+    }
+]
